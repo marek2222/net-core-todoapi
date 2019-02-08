@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace net_core_todoapi.Controllers
+namespace TodoAp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
