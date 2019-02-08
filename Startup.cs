@@ -27,7 +27,7 @@ namespace net_core_todoapi
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddDbContext<TodoContext>(opt=> opt.UseInMemoryDatabase("net_core_todoapi"));
+      services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("net_core_todoapi"));
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
     }
 
@@ -44,6 +44,8 @@ namespace net_core_todoapi
         app.UseHsts();
       }
 
+      app.UseDefaultFiles();
+      app.UseStaticFiles();
       app.UseHttpsRedirection();
       app.UseMvc();
     }
